@@ -9,5 +9,9 @@ page_description:   "the new way of writing for the web"
 #page_footer:        "{PAGE_FOOTER}"
 # use this to change default website.logo
 #page_logo:          ...
+
 # to show which page is active in the navbar, use the "slug" entry of website.menu
 page_active:        home
+
+# to show the test reminders link
+show_reminders_test_link: true
