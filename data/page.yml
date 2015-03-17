@@ -14,4 +14,4 @@ page_description:   "the new way of writing for the web"
 page_active:        home
 
 # to show the test reminders link
-show_reminders_test_link: true
+show_reminders_test_link: false
