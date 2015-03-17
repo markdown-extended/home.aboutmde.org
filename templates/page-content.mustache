@@ -7,39 +7,69 @@
 </div>
 
 <div class="content" id="page-content" role="main">        
-{{#page.contents}}
 
-    {{#title}}
-    <h2>{{title}}
-        {{#description}}
-        &nbsp; <small><em>{{description}}</em></small>
-        {{/description}}
-    </h2>
-    {{/title}}
+    <div class="row">
 
-    {{#intro}}
-    <div class="lead">{{intro}}</div>
-    {{/intro}}
+        <div class="col-md-4 wow bounceInLeft" data-wow-duration="2s" data-wow-delay="1s">
+            <h2>Full specifications</h2>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <p>
+                <a href="http://manifest.aboutmde.org/" class="btn btn-primary btn-lg"><span class="fa fa-book"></span>&nbsp;MDE manifest</a>
+                <span class="text-muted text-warning">manifest.aboutmde.org</span>
+            </p>
+        </div>
 
-    <div class="container">
-        {{content}}
+        <div class="col-md-4 wow bounceInDown" data-wow-duration="2s" data-wow-delay="1s">
+            <h2>Want to try it?</h2>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <p>
+                <a href="http://dingus.aboutmde.org/" class="btn btn-info btn-lg"><span class="fa fa-code"></span>&nbsp;MDE dingus</a>
+                <span class="text-muted text-warning">dingus.aboutmde.org</span>
+            </p>
+        </div>
+
+        <div class="col-md-4 wow bounceInRight" data-wow-duration="2s" data-wow-delay="1s">
+            <h2>Parse MDE online</h2>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <p>
+                <a href="http://api.aboutmde.org/" class="btn btn-info btn-lg"><span class="fa fa-signal"></span>&nbsp;MDE API</a>
+                <span class="text-muted text-warning">api.aboutmde.org</span>
+            </p>
+        </div>
+
+    </div>
+    <br>
+
+    <div class="row">
+
+        <div class="col-md-4 wow bounceInLeft" data-wow-duration="2s" data-wow-delay="1s">
+            <h2>Forgot the syntax?</h2>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <p>
+                <a href="http://reminders.aboutmde.org/" class="btn btn-success btn-lg"><span class="fa fa-support"></span>&nbsp;MDE reminders</a>
+                <span class="text-muted text-warning">reminders.aboutmde.org</span>
+            </p>
+        </div>
+
+        <div class="col-md-4 wow bounceInUp" data-wow-duration="2s" data-wow-delay="1s">
+            <h2>Want to get involved?</h2>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <p>
+                <a href="http://github.com/markdown-extended/" class="btn btn-warning btn-lg"><span class="fa fa-github"></span>&nbsp;GitHub sources</a>
+                <span class="text-muted text-warning">github.com/markdown-extended</span>
+            </p>
+        </div>
+
+        <div class="col-md-4 wow bounceInRight" data-wow-duration="2s" data-wow-delay="1s">
+            <h2>Want to use it?</h2>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <p>
+                <a href="http://github.com/piwi/markdown-extended/" class="btn btn-warning btn-lg"><span class="fa fa-github"></span>&nbsp;PHP MDE parser</a>
+                <span class="text-muted text-warning">piwi/markdown-extended</span>
+            </p>
+        </div>
+
     </div>
 
-    {{#has_notes}}
-    <ul class="list-group small">
-        {{#notes}}
-        <li class="list-group-item">{{content}}</li>
-        {{/notes}}
-    </ul>
-    {{/has_notes}}
-
-    {{#show_hr}}
-    <hr class="clearfix">
-    {{/show_hr}}
-    {{^show_hr}}
-    <div class="clearfix"></div>
-    {{/show_hr}}
-
-{{/page.contents}}
 </div>
 
