@@ -1,5 +1,6 @@
 meta_title:         "Home"
 meta_description:   "Mardown Extended : the new way of writing for the web"
+#meta_robots:        none
 
 # on the basic model: **Markdown** _extended_ (**<strong>MDE</strong>** _<em>dingus</em>_)
 page_title:         "**Markdown** _<em>extended</em>_"
