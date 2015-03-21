@@ -16,3 +16,9 @@ page_active:        home
 
 # to show the test reminders link
 show_reminders_test_link: false
+
+contents:
+- title:            "{J2_CONTENT_TITLE}"
+  description:      "{J2_CONTENT_DESCRIPTION}"
+  intro:            "{CONTENT_INTRO}"
+  j2:               "{% include './build/templates/home-content.j2' %}"
