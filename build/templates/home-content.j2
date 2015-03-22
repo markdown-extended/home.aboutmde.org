@@ -1,8 +1,15 @@
+
     <div class="row">
 
         <div class="col-md-4 wow bounceInLeft" data-wow-duration="2s" data-wow-delay="1s">
             <h2>Full specifications</h2>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+
+<p>The rules of the syntax are listed and described in the <strong>MDE&#39;s specification</strong>, which is 
+the <em>big work</em> of this site. We write and maintain the <a href="http://manifest.aboutmde.org/">MDE manifest</a>
+for this purpose.</p>
+<p>A quick documentation is proposed in the <a href="http://cheatsheet.aboutmde.org/">cheat sheet</a> with all
+rules in one page for a day-to-day usage.</p>
+
             <p>
                 <a href="http://manifest.aboutmde.org/" class="btn btn-primary btn-lg"><span class="fa fa-book"></span>&nbsp;MDE manifest</a>
                 <span class="text-muted text-warning">manifest.aboutmde.org</span>
@@ -11,7 +18,11 @@
 
         <div class="col-md-4 wow bounceInDown" data-wow-duration="2s" data-wow-delay="1s">
             <h2>Want to try it?</h2>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+
+<p>To give it a try or to edit your day-to-day Markdown contents, you can use our online <a href="http://dingus.aboutmde.org/">MDE dingus</a>
+soft and perfect to work with its cool web-interface.</p>
+<p>No button or long text, just your keyboard and what you want to write ...</p>
+
             <p>
                 <a href="http://dingus.aboutmde.org/" class="btn btn-info btn-lg"><span class="fa fa-code"></span>&nbsp;MDE dingus</a>
                 <span class="text-muted text-warning">dingus.aboutmde.org</span>
@@ -20,7 +31,11 @@
 
         <div class="col-md-4 wow bounceInRight" data-wow-duration="2s" data-wow-delay="1s">
             <h2>Parse MDE online</h2>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+
+<p>Because we are modern people, we have made a <em>webservice API</em> to parse Markdown Extended contents online with a simple HTTP request.</p>
+<p>The API is quite well documented and allows you to parse contents and files and to get a <em>JSON</em> response you can easily handle
+with common programming languages.</p>
+
             <p>
                 <a href="http://api.aboutmde.org/" class="btn btn-info btn-lg"><span class="fa fa-signal"></span>&nbsp;MDE API</a>
                 <span class="text-muted text-warning">api.aboutmde.org</span>
@@ -34,7 +49,13 @@
 
         <div class="col-md-4 wow bounceInLeft" data-wow-duration="2s" data-wow-delay="1s">
             <h2>Forgot the syntax?</h2>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+
+<p>Because we have anything to do but reminding some syntax rules, we have made an interactive <em>cheat-sheet</em> for the MDE syntax. It is
+quite easy to read and use: one rule per line with raw examples. The rules are separated in the three <em>scopes</em> of the specifications:
+<strong>typographic</strong>, <strong>block</strong> and <strong>miscellaneous</strong>.</p>
+<p>Additionally, you can use our small <a href="{{ env.reminders_url | safe }}" onclick="return mdereminders_popup();" title="Markdown syntax reminders (new floated window)" target="_blank">syntax reminders</a>
+tool to keep the rules in sight when you work on a content.</p>
+
             <p>
                 <a href="http://cheatsheet.aboutmde.org/" class="btn btn-success btn-lg"><span class="fa fa-support"></span>&nbsp;MDE cheat-sheet</a>
                 <span class="text-muted text-warning">cheatsheet.aboutmde.org</span>
@@ -43,7 +64,12 @@
 
         <div class="col-md-4 wow bounceInUp" data-wow-duration="2s" data-wow-delay="1s">
             <h2>Want to get involved?</h2>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+
+<p>You want to contribute to this project? No need to be developer or to know anything about
+coding ;) If you want to help you can do so, in many ways ... first have a look at the
+<a href="http://github.com/markdown-extended/aboutmde.org/issues/milestones">milestones</a> and you
+may find one you can contribute to.</p>
+
             <p>
                 <a href="http://github.com/markdown-extended/" class="btn btn-warning btn-lg"><span class="fa fa-github"></span>&nbsp;GitHub sources</a>
                 <span class="text-muted text-warning">github.com/markdown-extended</span>
@@ -52,7 +78,11 @@
 
         <div class="col-md-4 wow bounceInRight" data-wow-duration="2s" data-wow-delay="1s">
             <h2>Want to use it?</h2>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+
+<p>Last but not least, the first <strong>MDE parser</strong> is under a hard work from years ... It is coded in 
+<a href="http://php.net">PHP</a> and proposes a <em>command</em> for terminal usage, just like any other program.</p>
+<p>PHP developers can of course use it in their work. It is available as a <a href="http://getcomposer.org">Composer</a> package
+named <code>piwi/markdown-extended</code>.</p>
             <p>
                 <a href="http://github.com/piwi/markdown-extended/" class="btn btn-warning btn-lg"><span class="fa fa-github"></span>&nbsp;PHP MDE parser</a>
                 <span class="text-muted text-warning">piwi/markdown-extended</span>

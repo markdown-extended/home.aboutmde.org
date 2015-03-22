@@ -7,7 +7,7 @@ page_title:         "**Markdown** _<em>extended</em>_"
 page_link:          "http://home.aboutmde.org/"
 page_description:   "the new way of writing for the web"
 
-#page_footer:        "{PAGE_FOOTER}"
+page_footer:        "This website contents are licensed under a <a href=\"http://spdx.org/licenses/CC-BY-SA-3.0\">Creative Commons Attribution Share Alike 3.0</a>."
 # use this to change default website.logo
 #page_logo:          ...
 
@@ -18,7 +18,25 @@ page_active:        home
 show_reminders_test_link: false
 
 contents:
-- title:            "{J2_CONTENT_TITLE}"
-  description:      "{J2_CONTENT_DESCRIPTION}"
-  intro:            "{CONTENT_INTRO}"
-  j2:               "{% include './build/templates/home-content.j2' %}"
+- content: |
+    <div class="jumbotron home lead text-center">
+        <strong>Markdown Extended</strong> is an <em>extended implementation</em> of <a href="http://daringfireball.net/projects/markdown/" title="See it online">John Gruber&#39;s original markdown syntax</a> to write reach contents from simple text files such as common <code>.txt</code>.
+        <i class="fa fa-info-circle" id="plain-text-content"
+            data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="hover"
+            data-title="Markdown Extended plain text version of this content"
+            data-content="**Markdown Extended** is an *extended implementation* of [John Gruber's original markdown syntax](http://daringfireball.net/projects/markdown/ 'See it online') to write reach contents from simple text files such as common `.txt`."></i>
+    </div>
+
+- j2:               "{% include './build/templates/home-content.j2' %}"
+- title:            "**About** _<em>MDE</em>_"
+  markdown:         about
+- title:            "**Open** _<em>source</em>_"
+  markdown:         open-source
+#- j2:               "{% include './build/templates/disqus-comments.j2' %}"
+
+modalbox_link:      "Credits"
+modalbox:
+  label:            "credits"
+  description:      "**aboutmde.org** _<em>credits</em>_"
+  title:            "**aboutmde.org** _<em>credits</em>_"
+  markdown:         credits

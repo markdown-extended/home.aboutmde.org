@@ -18,6 +18,10 @@ $(function() {
     $('#website-mailto')
         .attr('href', 'mailto:'+website_email)
         .html(website_email);
+
+    // popover on homepage
+    $('#plain-text-content').popover();
+
 });
 
 new WOW().init();
