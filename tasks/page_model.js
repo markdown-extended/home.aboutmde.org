@@ -212,21 +212,15 @@ PageModel.prototype.transformData = function(data)
     }
 
     // organize contents: markdown BEFORE user process on data
-    if (data.page.contents != undefined) {
+    if (data.page.contents !== undefined) {
         for (var j=0; j<data.page.contents.length; j++) {
-            // markdown content
             if (data.page.contents[j].markdown != undefined) {
-                var filename = data.page.contents[j].markdown,
-                    ext = this.getExtension('page'),
-                    dir = this.getTmpPath('page'),
-                    mdfile = dir + filename.replace(ext, '') + ext;
-                if (this.grunt.file.exists(mdfile)) {
-                    data.page.contents[j].content = this.grunt.file.read(mdfile);
-                } else {
-                    throw new Error('Markdown file "' + mdfile + '" not found');
-                }
+                data.page.contents[j].content = this.Markdownify(data.page.contents[j].markdown);
             }
         }
+    }
+    if (data.page.modalbox !== undefined && data.page.modalbox.markdown !== undefined) {
+        data.page.modalbox.content = this.Markdownify(data.page.modalbox.markdown);
     }
 
     // user option
@@ -235,23 +229,39 @@ PageModel.prototype.transformData = function(data)
     }
 
     // organize contents: nunjucks AFTER user process on data
-    if (data.page.contents != undefined) {
+    if (data.page.contents !== undefined) {
         for (var j=0; j<data.page.contents.length; j++) {
-            // jinja content
             if (data.page.contents[j].j2 != undefined) {
-                var str = data.page.contents[j].j2;
-                data.page.contents[j].content = renderString(str, data, this.options);
+                data.page.contents[j].content = this.Nunjucksify(data.page.contents[j].j2, data);
             }
         }
+    }
+    if (data.page.modalbox !== undefined && data.page.modalbox.j2 !== undefined) {
+        data.page.modalbox.content = this.Nunjucksify(data.page.modalbox.j2, data);
     }
 
     // always return the full data
     return data;
 };
 
-PageModel.prototype.Nunjucksize = function(str)
+// parse a markdown file
+PageModel.prototype.Markdownify = function(filepath)
 {
-    return str;
+    var ext = this.getExtension('page'),
+        dir = this.getTmpPath('page'),
+        mdfile = dir + filepath.replace(ext, '') + ext;
+    if (this.grunt.file.exists(mdfile)) {
+        return this.grunt.file.read(mdfile);
+    } else {
+        throw new Error('Markdown file "' + mdfile + '" not found');
+    }
+    return filepath;
+};
+
+// parse a nunjucks string
+PageModel.prototype.Nunjucksify = function(str, data)
+{
+    return renderString(str, data, this.options);
 };
 
 // get a task pages argument list
